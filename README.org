@@ -1,0 +1,6 @@
+From https://github.com/mritd/rime
+
+See https://mritd.me/2019/03/23/oh-my-rime/
+
+
+针对个人习惯，进行了一点微调。

@@ -1,0 +1,46 @@
+patch:
+  menu:
+    page_size: 8
+  schema_list:
+  - schema: luna_pinyin_simp      # 朙月拼音 简化字
+  - schema: luna_pinyin           # 朙月拼音
+  - schema: luna_pinyin_fluency   # 语句流
+#  - schema: double_pinyin         # 自然碼雙拼
+#  - schema: double_pinyin_flypy   # 小鹤雙拼
+#  - schema: double_pinyin_pyjj    # 拼音加加双拼
+#  - schema: wubi_pinyin           # 五笔拼音混合輸入
+
+  switcher:
+    abbreviate_options: true
+    caption: "〔输入法设置〕"
+    fold_options: true
+    hotkeys:
+      - "Control+grave"
+      - "Control+Shift+grave"
+    option_list_separator: "/"
+    save_options:
+      - full_shape
+      - ascii_punct
+      - simplification
+      - extended_charset
+      - zh_hant
+      - zh_hans
+      - zh_hant_tw
+
+  # capslock 键切换英文并输出大写
+  ascii_composer/good_old_caps_lock: true
+  # 输入法中英文状态快捷键
+  ascii_composer/switch_key:
+    Caps_Lock: commit_code
+    Control_L: noop
+    Control_R: noop
+    Shift_L: noop
+    Shift_R: noop
+
+  key_binder/bindings:
+    # hotkey switch
+    - { when: always, accept: Control+space, toggle: ascii_mode }
+    - { when: paging, accept: comma, send: Page_Up }
+    - { when: has_menu, accept: period, send: Page_Down }
+    - { when: has_menu, accept: Control+period, send: Down }
+    - { when: has_menu, accept: Control+comma, send: Up }
