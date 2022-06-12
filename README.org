@@ -8,3 +8,8 @@ See https://mritd.me/2019/03/23/oh-my-rime/
 build目录为部署后自动生成
 
 default.custom.yaml 中的 schema_list 字段
+
+
+default.custom.yaml: 全局设定
+<方案標識>.custom.yaml：預設輸入方案副本
+〔發行版設定〕 ibus_rime.default.yaml

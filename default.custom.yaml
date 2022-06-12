@@ -1,15 +1,11 @@
 patch:
   menu:
-    page_size: 8
+    page_size: 10
 
   schema_list: # 选择输入法方案
   - schema: luna_pinyin_fluency   # 语句流：支持繁体、简体
   # - schema: luna_pinyin_simp      # 朙月拼音：简体字
   # - schema: luna_pinyin           # 朙月拼音: 繁體字
-  #  - schema: double_pinyin         # 自然碼雙拼
-  #  - schema: double_pinyin_flypy   # 小鹤雙拼
-  #  - schema: double_pinyin_pyjj    # 拼音加加双拼
-  #  - schema: wubi_pinyin           # 五笔拼音混合輸入
 
   switcher:
     abbreviate_options: true
