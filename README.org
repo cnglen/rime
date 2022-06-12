@@ -13,3 +13,14 @@ default.custom.yaml 中的 schema_list 字段
 - default.custom.yaml: 全局设定
 - <方案標識>.custom.yaml：預設輸入方案副本
 - 〔發行版設定〕 ibus_rime.default.yaml
+
+* 安装
+
+#+begin_src
+cd .config/ibus/
+git clone git@github.com:cnglen/rime.git
+cd rime && make
+#+end_src
+
+
+https://extensions.gnome.org/extension/4112/customize-ibus/ 安装，支持ibus的配置（字体大小等）
