@@ -4,3 +4,7 @@ See https://mritd.me/2019/03/23/oh-my-rime/
 
 
 针对个人习惯，进行了一点微调。
+
+build目录为部署后自动生成
+
+default.custom.yaml 中的 schema_list 字段

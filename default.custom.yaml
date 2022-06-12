@@ -1,14 +1,15 @@
 patch:
   menu:
     page_size: 8
-  schema_list:
-  - schema: luna_pinyin_simp      # 朙月拼音 简化字
-  - schema: luna_pinyin           # 朙月拼音
-  - schema: luna_pinyin_fluency   # 语句流
-#  - schema: double_pinyin         # 自然碼雙拼
-#  - schema: double_pinyin_flypy   # 小鹤雙拼
-#  - schema: double_pinyin_pyjj    # 拼音加加双拼
-#  - schema: wubi_pinyin           # 五笔拼音混合輸入
+
+  schema_list: # 选择输入法方案
+  - schema: luna_pinyin_fluency   # 语句流：支持繁体、简体
+  # - schema: luna_pinyin_simp      # 朙月拼音：简体字
+  # - schema: luna_pinyin           # 朙月拼音: 繁體字
+  #  - schema: double_pinyin         # 自然碼雙拼
+  #  - schema: double_pinyin_flypy   # 小鹤雙拼
+  #  - schema: double_pinyin_pyjj    # 拼音加加双拼
+  #  - schema: wubi_pinyin           # 五笔拼音混合輸入
 
   switcher:
     abbreviate_options: true
@@ -27,14 +28,11 @@ patch:
       - zh_hans
       - zh_hant_tw
 
-  # capslock 键切换英文并输出大写
-  ascii_composer/good_old_caps_lock: true
-  # 输入法中英文状态快捷键
-  ascii_composer/switch_key:
-    Caps_Lock: commit_code
+  ascii_composer/switch_key:   # 输入法中英文状态快捷键
+    Caps_Lock: commit_code # 中文沒有大写，故按下大写锁定键后直接切换为英文输入法
     Control_L: noop
     Control_R: noop
-    Shift_L: noop
+    Shift_L: commit_code # 按下左 shift 英文字符直接上屏，不需要再次回车，输入法保持英文状态
     Shift_R: noop
 
   key_binder/bindings:
