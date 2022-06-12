@@ -1,3 +1,6 @@
 build
 luna_pinyin.contact.dict.yaml
 user.yaml
+trash
+*.userdb
+installation.yaml

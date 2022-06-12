@@ -1,28 +1,13 @@
+# -*- coding: utf-8 -*-
+
 patch:
-  menu:
-    page_size: 10
+  menu/page_size: 10            # 选单每页显示后选项个数
 
   schema_list: # 选择输入法方案
   - schema: luna_pinyin_fluency   # 语句流：支持繁体、简体
-  # - schema: luna_pinyin_simp      # 朙月拼音：简体字
-  # - schema: luna_pinyin           # 朙月拼音: 繁體字
+  - schema: luna_pinyin_simp      # 朙月拼音：简体字
 
-  switcher:
-    abbreviate_options: true
-    caption: "〔输入法设置〕"
-    fold_options: true
-    hotkeys:
-      - "Control+grave"
-      - "Control+Shift+grave"
-    option_list_separator: "/"
-    save_options:
-      - full_shape
-      - ascii_punct
-      - simplification
-      - extended_charset
-      - zh_hant
-      - zh_hans
-      - zh_hant_tw
+  switcher/caption: "〔输入法设置〕" # 切换器被调用时屏幕显示的名字
 
   ascii_composer/switch_key:   # 输入法中英文状态快捷键
     Caps_Lock: commit_code # 中文沒有大写，故按下大写锁定键后直接切换为英文输入法
@@ -32,7 +17,6 @@ patch:
     Shift_R: noop
 
   key_binder/bindings:
-    # hotkey switch
     - { when: always, accept: Control+space, toggle: ascii_mode }
     - { when: paging, accept: comma, send: Page_Up }
     - { when: has_menu, accept: period, send: Page_Down }

@@ -1,0 +1,28 @@
+# -*- coding: utf-8 -*-
+# luna_pinyin_fluency.custom.yaml
+
+patch:
+
+  switches:
+    - name: ascii_mode
+      reset: 0
+      states: ["中文", "西文"]
+    - name: full_shape
+      states: ["半角", "全角"]
+    - name: simplification
+      reset: 1                  # 默認啓用「繁→簡」轉換。
+      states: [ "漢字", "汉字" ]
+    - name: ascii_punct
+      states: ["。，", "．，"]
+
+
+  punctuator:
+    import_preset: symbols
+    symbols:
+      "/bq": [😂️, 😅️, ☺️, 😱️, 😭️, 😇️, 🙃️, 🤔️, 💊️, 💯️, 👍️, 🙈️, 💩️, 😈️ ]
+      "/fx": [↑, ↓, ←, →, ↖, ↘, ⇟, ⇞]
+
+  recognizer/patterns/punct: "^/([a-z]+|[0-9]0?)$"
+
+  # 載入朙月拼音擴充詞庫
+  translator/dictionary: luna_pinyin.extended
