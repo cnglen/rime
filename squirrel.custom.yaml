@@ -1,2 +1,3 @@
 patch:
   style/horizontal: true                        # 横排/竖排
+  style/candidate_list_layout: linear 
