@@ -9,12 +9,14 @@ patch:
       states: ["中文", "西文"]
     - name: full_shape
       states: ["半角", "全角"]
-    - name: simplification
+    - name: zh_simp
       reset: 1                  # 默認啓用「繁→簡」轉換。
       states: [ "漢字", "汉字" ]
     - name: ascii_punct
       states: ["。，", "．，"]
 
+  simplifier:
+    option_name: zh_simp
 
   punctuator:
     import_preset: symbols
@@ -24,5 +26,5 @@ patch:
 
   recognizer/patterns/punct: "^/([a-z]+|[0-9]0?)$"
 
-  # 載入朙月拼音擴充詞庫
+  # 加载明月拼音扩充词库
   translator/dictionary: luna_pinyin.extended

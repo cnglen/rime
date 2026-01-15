@@ -18,7 +18,7 @@ patch:
 
   key_binder/bindings:
     - { when: always, accept: Control+space, toggle: ascii_mode }
-    - { when: paging, accept: comma, send: Page_Up }
-    - { when: has_menu, accept: period, send: Page_Down }
-    - { when: has_menu, accept: Control+period, send: Down }
-    - { when: has_menu, accept: Control+comma, send: Up }
+    - { when: paging, accept: comma, send: Page_Up }      # , 上一页
+    - { when: has_menu, accept: period, send: Page_Down } # . 下一页
+    - { when: has_menu, accept: Control+period, send: Down } # C-, 上一项
+    - { when: has_menu, accept: Control+comma, send: Up }    # C-. 下一项

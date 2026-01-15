@@ -2,18 +2,23 @@
 
 * 配置
 
+
+#+begin_src bash
+  # 更新上游的配置
+  make update_rime  
+#+end_src
+
 - build目录为部署后自动生成, 可删除，重新部署会自动生成。
 
 
-- rime的前端
+rime的前端
   - macOS: Squirrel(鼠须管)
   - windows: Weasel(小狼毫)
   - linux: ibus-rime
     
-针对个人习惯，进行了一点微调。
 
-
-
+输入法:
+- 
 default.custom.yaml 中的 schema_list 字段
 
 
