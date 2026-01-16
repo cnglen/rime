@@ -4,7 +4,7 @@ init:
 update_rime:
 	git submodule init
 	git submodule update --remote
-	cd plum && bash rime-install
+	cd plum && bash rime-install && bash rime-install emoji
 	ibus restart
 
 deploy:

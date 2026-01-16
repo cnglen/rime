@@ -1,2 +1,8 @@
+# Linux上受限于ibus框架，所以Linux上的ibus-rime无法配置配色,
+# 方案: https://github.com/openSUSE/Customize-IBus https://extensions.gnome.org/extension/4112/customize-ibus/
+
 patch:
-  style/horizontal: true                        # 横排/竖排
+  style:
+    inline_preedit: false # true: 嵌入式候选窗，单行模式 在光标位置显示预编辑文本; false: 双行模式，第一行显示预编辑文本，第二行显示候选字, kitty单行模式有问题
+    horizontal: false # true ~ 横排显示; false ~ 竖排显示, emacs快捷键更直观
+    
