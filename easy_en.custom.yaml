@@ -1,0 +1,5 @@
+patch:
+  easy_en/enable_sentence: false
+  engine/filters:               # 关闭连续输入增强功能
+    - uniquifier
+  translator/enable_sentence: false # 以关闭造句功能

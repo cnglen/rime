@@ -30,3 +30,6 @@ patch:
     tips: none
     inherit_comment: false
 
+
+  # 中英混输效果
+  __include: easy_en:/patch    
